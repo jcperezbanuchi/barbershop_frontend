@@ -48,7 +48,7 @@ export default class AppointmentContainer extends Component {
     getAppointments() {
         fetch(`${baseURL}appointments`)
         .then(data => { return data.json()}, err => console.log(err))
-            .then(parsedData => {this.setState({appointmentList: parsedData})}, err => console.log(err))
+            .then(parsedData => {this.setState({appointmentList: parsedData.data})}, err => console.log(err))
             .catch((e)=>console.log(e.message))
     }
 
