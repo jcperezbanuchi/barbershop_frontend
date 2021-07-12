@@ -1,9 +1,16 @@
 import React, { Component } from 'react'
 import NewAppointment from './NewAppointment'
-import { Button } from 'reactstrap'
+import { Button, Table } from 'reactstrap'
 import UpdateAppointments from './UpdateAppointments'
+import './appointment.css'
 
-const baseURL  = 'http://localhost:8001/'
+let baseURL;
+
+if (process.env.NODE_ENV === 'development') {
+    baseURL = 'http://localhost:8001/';
+} else {
+    baseURL = 'https://barbers-backend.herokuapp.com/';
+}
 
 export default class AppointmentContainer extends Component {
     constructor(props){
@@ -80,7 +87,8 @@ export default class AppointmentContainer extends Component {
                      :
                      ''
                 }
-                <table>
+                <h1>Your appointments: </h1>
+                <Table responsive striped bordered hover>
                     <thead>
                         <tr>
                             <td>First Name</td>
@@ -92,6 +100,8 @@ export default class AppointmentContainer extends Component {
                             <td>date</td>
                             <td>time</td>
                             <td>comment</td>
+                            <td>Update</td>
+                            <td>Delete</td>
                         </tr> 
                     </thead>
                     <tbody>
@@ -108,14 +118,14 @@ export default class AppointmentContainer extends Component {
                                         <td> {appointment.date} </td>
                                         <td> {appointment.time} </td>
                                         <td> {appointment.comment} </td>
-                                        <td onClick = { () => this.showUpdateForm(appointment)}> Update </td>
-                                        <td><button onClick={() => this.deleteAppointment(appointment.id)}>X </button></td>
+                                        <td><Button onClick = { () => this.showUpdateForm(appointment)}> Update </Button></td>
+                                        <td><Button onClick={() => this.deleteAppointment(appointment.id)}>X </Button></td>
                                     </tr>
                                 )
                             }
                         )}
                     </tbody>
-                </table>
+                </Table>
             </div>
         )
     }

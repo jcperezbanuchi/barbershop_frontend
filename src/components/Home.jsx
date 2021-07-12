@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
-
+import { Link } from 'react-router-dom'
+import './home.css'
 
 export default class Home extends Component {
     render() {
         return (
-            <div>
-                <h1> Your Appointments:  </h1>
+            <div className ='landing-text' >
+                <div id='landing-text'>Welcome to D Barbershop</div>
+                <Link to="/appointments" class="btn btn-info btn-lg" role="button">Make an Appointment Today!</Link>
                 
             </div>
         )

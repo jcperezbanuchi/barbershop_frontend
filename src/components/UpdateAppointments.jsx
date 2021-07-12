@@ -8,7 +8,15 @@ import {
     Input,
     Label,
   } from "reactstrap";
-const baseURL  = 'http://localhost:8001/'
+  
+
+let baseURL;
+
+if (process.env.NODE_ENV === 'development') {
+    baseURL = 'http://localhost:8001/';
+} else {
+    baseURL = 'https://barbers-backend.herokuapp.com/';
+}
 
 export default class UpdateAppointments extends Component {
     constructor(props){
@@ -78,7 +86,7 @@ export default class UpdateAppointments extends Component {
     render() {
         return (
             <Modal isOpen={true} toggle={this.props.toggle()} >
-                    <ModalHeader >Add an Appointment </ModalHeader>
+                    <ModalHeader toggle={this.props.toggle()} closeButton >Edit Appointment </ModalHeader>
                         <ModalBody>
                         <Form onSubmit={ (event) => this.handleSubmit(event) } >
                             <FormGroup>
@@ -97,8 +105,8 @@ export default class UpdateAppointments extends Component {
                             <Label htmlFor="email"></Label>
                             <Input type="email" id="email" name="email" onChange={ (event) => this.handleChange(event) } value={ this.state.email} placeholder="Email" />
 
-                            <Label htmlFor="contact">Prefered contact:</Label>
-                            <Input type="text" id="contact" name="contact" onChange={ (event) => this.handleChange(event) } value={ this.state.contact} placeholder="Email or Phone" />
+                            <Label htmlFor="contact"></Label>
+                            <Input type="text" id="contact" name="contact" onChange={ (event) => this.handleChange(event) } value={ this.state.contact} placeholder="Preferred Contact: Phone or Email" />
                         </FormGroup> 
                         <FormGroup>
                         <Label htmlFor="date"></Label>

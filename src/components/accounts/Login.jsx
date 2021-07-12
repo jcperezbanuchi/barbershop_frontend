@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
 import { Link, Redirect } from 'react-router-dom';
 
-const baseURL = 'http://localhost:8001/login'
+let baseURL;
+
+if (process.env.NODE_ENV === 'development') {
+    baseURL = 'http://localhost:8001/';
+} else {
+    baseURL = 'https://barbers-backend.herokuapp.com/';
+}
 
 export default class Login extends Component {
     constructor(props){
@@ -9,12 +15,12 @@ export default class Login extends Component {
         this.state = {
             username: '',
             password: '',
-            isAuthenticated: true,
+            // isAuthenticated: true,
       };
     }
     onSubmit = (e) => {
         e.preventDefault()
-        fetch(`${baseURL}`, {
+        fetch(`${baseURL}login`, {
             method: 'POST',
             body: JSON.stringify({
                 username: this.state.username,
@@ -38,9 +44,9 @@ export default class Login extends Component {
 
     render() {
         
-        if (this.state.isAuthenticated) {
-            return <Redirect to="/" />;
-          }
+        // if (this.state.isAuthenticated) {
+        //     return <Redirect to="/" />;
+        //   }
           const { username, password } = this.state;
           return (
             <div className="col-md-6 m-auto">
