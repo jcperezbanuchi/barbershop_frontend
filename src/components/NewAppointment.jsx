@@ -100,7 +100,7 @@ export default class NewAppointment extends Component {
                         <Input type="email" id="email" name="email" onChange={ (event) => this.handleChange(event) } value={ this.state.email} placeholder="Email" />
 
                         <Label htmlFor="contact"></Label>
-                        <Input type="text" id="contact" name="contact" onChange={ (event) => this.handleChange(event) } value={ this.state.contact} placeholder="Preffered Contact" />
+                        <Input type="text" id="contact" name="contact" onChange={ (event) => this.handleChange(event) } value={ this.state.contact} placeholder="Preferred Contact" />
                         </FormGroup>
                         <Label htmlFor="date"></Label>
                         <Input type="date" id="date" name="date" onChange={ (event) => this.handleChange(event) } value={ this.state.date} placeholder="Date" />
