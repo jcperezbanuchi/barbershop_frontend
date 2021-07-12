@@ -48,7 +48,6 @@ export default class UpdateAppointments extends Component {
         })
     }
     handleSubmit(event) {
-        event.preventDefault()
         fetch(`${baseURL}appointments/${this.state.id}/`, {
             method: 'PUT',
             body: JSON.stringify({

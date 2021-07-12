@@ -46,7 +46,7 @@ export default class AppointmentContainer extends Component {
     }
 
     deleteAppointment(id) {
-        fetch(`${baseURL}appointments/${id}`, {
+        fetch(`${baseURL}appointments/${id}/`, {
           method: 'DELETE'
         })
           .then(res => res) 
