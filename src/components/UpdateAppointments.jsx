@@ -11,7 +11,7 @@ import {
   
 
 let baseURL= 'https://barbers-backend.herokuapp.com/';
-
+// let baseURL ='http://localhost:8001/' 
 // if (process.env.NODE_ENV === 'development') {
 //     baseURL = 'http://localhost:8001/';
 // } else {

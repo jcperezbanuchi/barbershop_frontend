@@ -4,10 +4,11 @@
     font-size: 4rem;
     font-weight: bold;
     padding-top: 200px;
+
 }
 .landing-text{
     color: #f5f5f5;
-    text-shadow: 12px 12px 12px rgb(0, 0, 0);
+    text-shadow: 12px 12px 12px rgb(8, 8, 8);
     display: inline;
     text-align: center;
     vertical-align: middle;
@@ -25,7 +26,6 @@
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }   
 
 .btn-group-lg>.btn, .btn-lg {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
+import { Navbar } from 'reactstrap'
 import './MainNavigation.css'
 
 
@@ -11,7 +12,8 @@ export default class MainNavigation extends Component {
                     <h1>BarberShop</h1>
 
                 </div>
-                <nav className='main-navigation__items'>
+                <Navbar className='main-navigation__items'>
+                   
                     <ul>
                         <li><NavLink to='/home'>Home</NavLink></li>
                         <li><NavLink to='/ourservices'>Our Services</NavLink></li>
@@ -22,7 +24,8 @@ export default class MainNavigation extends Component {
 
 
                     </ul>
-                </nav>
+                
+                </Navbar>
                 
             </header>
         )

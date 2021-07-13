@@ -1,5 +1,5 @@
 # barbershop_frontend
- <img src="https://ibb.co/gDMLQrz" width="500">
+ <img src="https://i.ibb.co/55WgC1B/Screen-Shot-2021-07-13-at-12-31-37-PM.png" atl="website screenshot"width="500">
 
  <h3>The Technologies Used</h3>
 <ul>
@@ -40,11 +40,11 @@ At this point in the app, I was able to render our login/register inputs, add ne
 <h3>Unsolved Problems / Notes For Self</h3>
 <br>
 <h4>Unsolved Problems</h4>
-<li>Login/Register authentication-being able to render only our login inputs before displaying other components.</li>
+<li>Login/Register authentication-being able to render only our login inputs before displaying the user appointments.</li>
 <br>
 <h4>Notes To Self
 <ul>
-<li>Needs a signup/login page with an encrypted password and authorization flow</li>
+<li>Needs a signup/login page with an encrypted password and authorization.</li>
 
 </ul>
 
