@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import {
     Modal,
     ModalHeader,
@@ -103,11 +104,10 @@ export default class NewAppointment extends Component {
                         <Input type="text" id="contact" name="contact" onChange={ (event) => this.handleChange(event) } value={ this.state.contact} placeholder="Preferred Contact" />
                         </FormGroup>
                         <Label htmlFor="date"></Label>
-                        <Input type="date" id="date" name="date" onChange={ (event) => this.handleChange(event) } value={ this.state.date} placeholder="Date" />
-
+                        <Input type="date" id="date" name="date" onChange={ (event) => this.handleChange(event) } value={ this.state.date} placeholder="Date" min ="2021-07-14"/>
                         <Label htmlFor="time"></Label>
                         <select id="time" name="time" value = {this.state.time} onChange={ (event) => this.handleChange(event) }>
-                            <option >7am-8am</option>
+                            <option value="7am-8am">7am-8am</option>
                             <option value="8am-9am">8am-9am</option>
                             <option value="9am-10am">9am-10am</option>
                             <option value="11am-12pm">11am-12pm</option>

@@ -76,7 +76,6 @@ export default class UpdateAppointments extends Component {
             .then(res => res.json())
             .then(resJson => {
                 this.props.handleUpdateAppointment(resJson.data)
-        
             })
             .catch(error => console.log({ 'Error': error }))
     };
@@ -114,7 +113,7 @@ export default class UpdateAppointments extends Component {
 
                         <Label htmlFor="time"></Label>
                         <select id="time" name="time" value = {this.state.time} onChange={ (event) => this.handleChange(event) }>
-                            <option >7am-8am</option>
+                            <option value="7am-8am">7am-8am</option>
                             <option value="8am-9am">8am-9am</option>
                             <option value="9am-10am">9am-10am</option>
                             <option value="11am-12pm">11am-12pm</option>

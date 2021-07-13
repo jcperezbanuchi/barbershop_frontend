@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 
-let baseURL;
+let baseURL = 'https://barbers-backend.herokuapp.com/'
 
-if (process.env.NODE_ENV === 'development') {
-    baseURL = 'http://localhost:8001/';
-} else {
-    baseURL = 'https://barbers-backend.herokuapp.com/';
-}
+// if (process.env.NODE_ENV === 'development') {
+//     baseURL = 'http://localhost:8001/';
+// } else {
+//     baseURL = 'https://barbers-backend.herokuapp.com/';
+// }
 
 export default class Login extends Component {
     constructor(props){
