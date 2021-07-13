@@ -10,13 +10,13 @@ import {
   } from "reactstrap";
   
 
-let baseURL;
+let baseURL= 'https://barbers-backend.herokuapp.com/';
 
-if (process.env.NODE_ENV === 'development') {
-    baseURL = 'http://localhost:8001/';
-} else {
-    baseURL = 'https://barbers-backend.herokuapp.com/';
-}
+// if (process.env.NODE_ENV === 'development') {
+//     baseURL = 'http://localhost:8001/';
+// } else {
+//     baseURL = 'https://barbers-backend.herokuapp.com/';
+// }
 
 export default class UpdateAppointments extends Component {
     constructor(props){
