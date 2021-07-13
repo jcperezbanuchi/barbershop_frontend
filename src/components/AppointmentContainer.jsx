@@ -6,6 +6,7 @@ import './appointment.css'
 
 
 let baseURL = 'https://barbers-backend.herokuapp.com/'
+// let baseURL ='http://localhost:8001/'
 
 
 // if(window.location.origin === 'https://barbers-app.herokuapp.com/'){

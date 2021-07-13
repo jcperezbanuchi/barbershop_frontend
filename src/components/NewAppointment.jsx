@@ -10,13 +10,14 @@ import {
   } from "reactstrap";
 
 
-let baseURL; 
+let baseURL= 'https://barbers-backend.herokuapp.com/';
+// let baseURL ='http://localhost:8001/' 
 
-if(window.location.origin === 'https://barbers-app.herokuapp.com/'){
-    baseURL= 'https://barbers-backend.herokuapp.com/'
-}else{
-    baseURL = 'http://localhost:8001/'
-}
+// if(window.location.origin === 'https://barbers-app.herokuapp.com/'){
+//     baseURL= 'https://barbers-backend.herokuapp.com/'
+// }else{
+//     baseURL = 'http://localhost:8001/'
+// }
 
 
 export default class NewAppointment extends Component {
