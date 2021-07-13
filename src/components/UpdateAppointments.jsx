@@ -109,7 +109,7 @@ export default class UpdateAppointments extends Component {
                         </FormGroup> 
                         <FormGroup>
                         <Label htmlFor="date"></Label>
-                        <Input type="date" id="date" name="date" onChange={ (event) => this.handleChange(event) } value={ this.state.date} placeholder="Date" />
+                        <Input type="date" id="date" name="date" onChange={ (event) => this.handleChange(event) } value={ this.state.date} min ="2021-07-14" placeholder="Date" />
 
                         <Label htmlFor="time"></Label>
                         <select id="time" name="time" value = {this.state.time} onChange={ (event) => this.handleChange(event) }>
