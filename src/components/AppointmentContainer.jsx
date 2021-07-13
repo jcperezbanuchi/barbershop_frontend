@@ -79,7 +79,7 @@ export default class AppointmentContainer extends Component {
     render() {
         return (
             <div>
-                <Button onClick= {(e) =>this.toggle(e)}>Make an Appointment</Button> { this.state.modal ?
+                <Button id= "button" onClick= {(e) =>this.toggle(e)}>Make an Appointment</Button> { this.state.modal ?
                 <NewAppointment isOpen={true} toggle = {() => this.toggle} handleAddAppointment = {(appointment) => this.handleAddAppointment(appointment)} />
                 :
                 ''
@@ -91,7 +91,8 @@ export default class AppointmentContainer extends Component {
                      ''
                 }
                 <h1>Your appointments: </h1>
-                <Table responsive striped bordered hover>
+                <div className = "table">
+                <Table responsive striped bordered hover size="sm" >
                     <thead>
                         <tr>
                             <td>First Name</td>
@@ -129,6 +130,7 @@ export default class AppointmentContainer extends Component {
                         )}
                     </tbody>
                 </Table>
+                </div>
             </div>
         )
     }

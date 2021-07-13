@@ -6,7 +6,7 @@ import {
     Form,
     FormGroup,
     Input,
-    Label,
+    Label
   } from "reactstrap";
 
 
@@ -120,7 +120,7 @@ export default class NewAppointment extends Component {
                         </select>
 
                         <Label htmlFor="comment"></Label>
-                        <Input type="text" id="comment" name="comment" onChange={ (event) => this.handleChange(event) } value={ this.state.comment} placeholder="Any Comments" />
+                        <Input type="text" id="comment" name="comment" rows={3} onChange={ (event) => this.handleChange(event) } value={ this.state.comment} placeholder="Any Comments" />
                 
                    
                     <Input type="submit" value="Add Appointment" />
