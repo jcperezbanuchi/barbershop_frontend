@@ -7,7 +7,7 @@ export default class Home extends Component {
         return (
             <div className ='landing-text' >
                 <div id='landing-text'>Welcome to D Barbershop</div>
-                <Link to="/appointments" class="btn btn-info btn-lg" role="button">Make an Appointment Today!</Link>
+                <Link to="/appointments" className="btn btn-info btn-lg" role="button">Make an Appointment Today!</Link>
                 
             </div>
         )

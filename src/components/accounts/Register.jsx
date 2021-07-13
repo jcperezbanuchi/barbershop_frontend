@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default class Register extends Component {
     state = {
@@ -27,6 +27,7 @@ export default class Register extends Component {
     onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
     render() {
+      //going to add this later to get authentication working
         // if (this.props.isAuthenticated) {
         //     return <Redirect to="/" />;
         //   }

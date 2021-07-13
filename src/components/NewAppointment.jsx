@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {
-    
     Modal,
     ModalHeader,
     ModalBody,
@@ -10,12 +9,13 @@ import {
     Label,
   } from "reactstrap";
 
-let baseURL;
 
-if (process.env.NODE_ENV === 'development') {
-    baseURL = 'http://localhost:8001/';
-} else {
-    baseURL = 'https://barbers-backend.herokuapp.com/';
+let baseURL; 
+
+if(window.location.origin === 'https://barbers-app.herokuapp.com/'){
+    baseURL= 'https://barbers-backend.herokuapp.com/'
+}else{
+    baseURL = 'http://localhost:8001/'
 }
 
 
@@ -43,8 +43,7 @@ export default class NewAppointment extends Component {
 
     handleSubmit(event) {
         event.preventDefault()
-        
-        fetch(baseURL, {
+        fetch(baseURL+'appointments/', {
             method: 'POST',
             body: JSON.stringify({
                 firstname: this.state.firstname,

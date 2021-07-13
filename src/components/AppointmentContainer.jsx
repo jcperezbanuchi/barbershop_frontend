@@ -4,13 +4,16 @@ import { Button, Table } from 'reactstrap'
 import UpdateAppointments from './UpdateAppointments'
 import './appointment.css'
 
-let baseURL;
 
-if (process.env.NODE_ENV === 'development') {
-    baseURL = 'http://localhost:8001/';
-} else {
-    baseURL = 'https://barbers-backend.herokuapp.com/';
+let baseURL; 
+
+if(window.location.origin === 'https://barbers-app.herokuapp.com/'){
+    baseURL= 'https://barbers-backend.herokuapp.com/'
+}else{
+    baseURL = 'http://localhost:8001/'
 }
+
+
 
 export default class AppointmentContainer extends Component {
     constructor(props){
@@ -46,7 +49,7 @@ export default class AppointmentContainer extends Component {
     }
 
     getAppointments() {
-        fetch(`${baseURL}appointments`)
+        fetch(baseURL+'appointments')
         .then(data => { return data.json()}, err => console.log(err))
             .then(parsedData => {this.setState({appointmentList: parsedData})}, err => console.log(err))
             .catch((e)=>console.log(e.message))
