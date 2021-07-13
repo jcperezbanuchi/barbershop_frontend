@@ -5,13 +5,14 @@ import UpdateAppointments from './UpdateAppointments'
 import './appointment.css'
 
 
-let baseURL; 
+let baseURL = 'https://barbers-backend.herokuapp.com/'
 
-if(window.location.origin === 'https://barbers-app.herokuapp.com/'){
-    baseURL= 'https://barbers-backend.herokuapp.com/'
-}else{
-    baseURL = 'http://localhost:8001/'
-}
+
+// if(window.location.origin === 'https://barbers-app.herokuapp.com/'){
+//     baseURL= 'https://barbers-backend.herokuapp.com/'
+// }else{
+//     baseURL = 'http://localhost:8001/'
+// }
 
 
 
